@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="description" content="Explore the projects and creations of Umtha-Unathi Mavuso, showcasing skills in web development, game design, and more.">
+    <meta name="keywords" content="Umtha-Unathi Mavuso, portfolio, projects, web development, game design, creative work">
+    <meta name="author" content="Umtha-Unathi Mavuso">
+
+    <!-- Open Graph metadata (for social media sharing) -->
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="Explore the projects and creations of Umtha-Unathi Mavuso, showcasing skills in web development, game design, and more.">
+    <meta property="og:image" content="../images/portfolio-thumbnail.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/portfolio.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio">
+    <meta name="twitter:description" content="Explore the projects and creations of Umtha-Unathi Mavuso, showcasing skills in web development, game design, and more.">
+    <meta name="twitter:image" content="../images/portfolio-thumbnail.jpg">
+    <meta name="twitter:site" content="@UmthaUnathi21">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0e0b16; /* Dark background */
+            color: #ffffff; /* Bright text color */
+            font-family: 'Press Start 2P', cursive; /* Arcade-like font */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Additional styles for the footer */
+        footer {
+            background-color: #1a1a2e; /* Slightly lighter background for footer */
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+        footer p {
+            margin: 0;
+        }
+        /* Adjust the padding-bottom of the content */
+        #content {
+            padding-bottom: 100px; /* Adjust this value based on the height of your footer */
+        }
+        #header {
+            background-color: #1a1a2e; /* Slightly lighter background for header */
+            padding: 1rem;
+        }
+        #header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #ffcc00; /* Bright yellow */
+            text-shadow: 2px 2px #ff0000; /* Red shadow for arcade effect */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        a {
+            color: #00ff00; /* Bright green */
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        a:hover {
+            color: #ff00ff; /* Magenta on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+        #content {
+            padding: 2rem;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ffffff; /* White border */
+            display: inline-block;
+            text-align: center;
+            line-height: 100px; /* Vertical centering of text */
+            font-size: 24px;
+            background-color: #1a1a2e; /* Darker background for cells */
+            margin-right: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cell:hover {
+            background-color: #ffcc00; /* Bright yellow on hover */
+        }
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        button {
+            background-color: #ffcc00; /* Bright yellow */
+            color: #0e0b16; /* Dark background */
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #ffff00; /* Brighter yellow on hover */
+        }
+        button:active {
+            animation: shake 0.3s ease; /* Shake animation on press */
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>   
+
+    <div id="header" itemscope itemtype="http://schema.org/WPHeader">
+        <h1 itemprop="headline">Navigation</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/blogpage.html">Blogs</a></li>
+            <li><a href="../html/profile.html">Profile</a></li>
+            <li><a href="../html/design.html">Design</a></li>
+            <li><a href="../html/essays.html">Essay</a></li>
+        </ul>
+    </div>
+
+    <div id="content" itemscope itemtype="http://schema.org/CreativeWork">
+        <h1 itemprop="headline">Portfolio</h1>
+        <p itemprop="description">Explore my projects and creations!</p>
+    </div>
+    
+    <!-- Tic-Tac-Toe Game -->
+    <div id="game-board" itemscope itemtype="http://schema.org/Game">
+        <h2 itemprop="name">Tic-Tac-Toe Game</h2>
+        <div class="row">
+            <div class="cell" onclick="makeMove(0, 0)" itemprop="gameLocation"></div>
+            <div class="cell" onclick="makeMove(0, 1)" itemprop="gameLocation"></div>
+            <div class="cell" onclick="makeMove(0, 2)" itemprop="gameLocation"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="makeMove(1, 0)" itemprop="gameLocation"></div>
+            <div class="cell" onclick="makeMove(1, 1)" itemprop="gameLocation"></div>
+            <div class="cell" onclick="makeMove(1, 2)" itemprop="gameLocation"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="makeMove(2, 0)" itemprop="gameLocation"></div>
+            <div class="cell" onclick="makeMove(2, 1)" itemprop="gameLocation"></div>
+            <div class="cell" onclick="makeMove(2, 2)" itemprop="gameLocation"></div>
+        </div>
+        <!-- Reset button -->
+        <button onclick="resetGame()">Reset Game</button>
+    </div>
+
+    <!-- Poem Generator -->
+    <div id="poem-generator" itemscope itemtype="http://schema.org/CreativeWork">
+        <p id="poem-display" itemprop="text"></p>
+        <button onclick="generatePoem()">Generate Poem</button>
+    </div>
+
+    <!-- JavaScript for Tic-Tac-Toe game and Poem Generator -->
+    <script src="../js/tictactoe.js"></script>
+    <script src="../js/poemgenerator.js"></script>
+
+    <footer itemscope itemtype="http://schema.org/WPFooter">
+        <p>Contact me at:</p>
+        <p itemprop="email">umthaoupa@gmail.com</p>
+        <p itemprop="telephone">0745809483</p>
+        <p>GitHub: <a href="https://github.com/UmthaUnathi21" itemprop="url">UmthaUnathi21</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umtha-Unathi's Design Section</title>
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Explore Umtha-Unathi's design processes and wireframes. This section showcases various design elements and techniques used in creating engaging interfaces.">
+    <meta name="keywords" content="Design, Wireframes, UX, UI, Interface Design, Web Design, Graphic Design, Design Processes">
+    <meta name="author" content="Umtha Unathi">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Umtha-Unathi's Design Section">
+    <meta property="og:description" content="Explore Umtha-Unathi's design processes and wireframes. This section showcases various design elements and techniques used in creating engaging interfaces.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://yourwebsite.com/html/design.html">
+    <meta property="og:image" content="http://yourwebsite.com/images/design-thumbnail.jpg"> 
+    <meta property="og:site_name" content="Umtha Unathi's Portfolio">
+    <meta property="article:author" content="Umtha Unathi">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Umtha-Unathi's Design Section">
+    <meta name="twitter:description" content="Explore Umtha-Unathi's design processes and wireframes. This section showcases various design elements and techniques used in creating engaging interfaces.">
+    <meta name="twitter:image" content="http://yourwebsite.com/images/design-thumbnail.jpg"> 
+    <meta name="twitter:site" content="@UmthaUnathi21"> 
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+           margin: 0;
+           padding: 0;
+           background-color: #0e0b16; /* Dark background */
+           color: #ffffff; /* Bright text color */
+           font-family: 'Press Start 2P', cursive; /* Arcade-like font */
+           display: flex;
+           flex-direction: column;
+           min-height: 100vh;
+       }
+       /* Additional styles for the footer */
+       footer {
+           background-color: #1a1a2e; /* Slightly lighter background for footer */
+           padding: 1rem;
+           text-align: center;
+           margin-top: auto; /* Push the footer to the bottom */
+       }
+       footer p {
+           margin: 0;
+       }
+       /* Adjust the padding-bottom of the content */
+       #content {
+           padding-bottom: 100px; /* Adjust this value based on the height of your footer */
+       }
+       #header {
+           background-color: #1a1a2e; /* Slightly lighter background for header */
+           padding: 1rem;
+       }
+       #header h1 {
+           margin: 0;
+           font-size: 1.5rem;
+           color: #ffcc00; /* Bright yellow */
+           text-shadow: 2px 2px #ff0000; /* Red shadow for arcade effect */
+       }
+       ul {
+           list-style-type: none;
+           padding: 0;
+       }
+       ul li {
+           display: inline;
+           margin-right: 1rem;
+       }
+       a {
+           color: #00ff00; /* Bright green */
+           text-decoration: none;
+           transition: color 0.3s ease, transform 0.3s ease;
+       }
+       a:hover {
+           color: #ff00ff; /* Magenta on hover */
+           transform: scale(1.1); /* Slightly enlarge on hover */
+       }
+       #content {
+           padding: 2rem;
+       }
+       .cell {
+           width: 100px;
+           height: 100px;
+           border: 1px solid #ffffff; /* White border */
+           display: inline-block;
+           text-align: center;
+           line-height: 100px; /* Vertical centering of text */
+           font-size: 24px;
+           background-color: #1a1a2e; /* Darker background for cells */
+           margin-right: 5px;
+           margin-bottom: 5px;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       .cell:hover {
+           background-color: #ffcc00; /* Bright yellow on hover */
+       }
+       .row::after {
+           content: "";
+           display: table;
+           clear: both;
+       }
+       button {
+           background-color: #ffcc00; /* Bright yellow */
+           color: #0e0b16; /* Dark background */
+           border: none;
+           padding: 0.5rem 1rem;
+           font-size: 1rem;
+           margin-right: 1rem;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+       }
+       button:hover {
+           background-color: #ffff00; /* Brighter yellow on hover */
+       }
+       button:active {
+           animation: shake 0.3s ease; /* Shake animation on press */
+       }
+       @keyframes shake {
+           0% { transform: translateX(0); }
+           25% { transform: translateX(-5px); }
+           50% { transform: translateX(5px); }
+           75% { transform: translateX(-5px); }
+           100% { transform: translateX(0); }
+       }
+   </style>
+
+</head>
+<body>
+
+    <div id="header">
+        <h1>Navigation</h1>
+        <ul>
+            <a href="../index.html">Home</a>
+            <a href="../html/blogpage.html">Blogs</a>
+            <a href="../html/portfolio.html">Portfolio</a>
+            <a href="../html/profile.html">Profile</a>
+            <a href="../html/essays.html">Essay</a>
+        </ul>
+    </div>
+
+    <!-- HTML for Previous and Next buttons -->
+    <div id="buttonContainer">
+        <button id="prevButton">Previous</button>
+        <button id="nextButton">Next</button>
+    </div>
+
+    <div id="content" class="h-entry">
+        <h1 class="p-name">Design Section</h1>
+        <h2 class="p-summary">Wireframes & Design Processes</h2>
+        <!-- img tag with ID galleryImage -->
+        <img id="galleryImage" class="u-photo" src="" alt="Gallery Image" width="800" height="650">
+        <p class="e-content">
+            <!-- blog content goes here -->
+            <p>Wireframes are a crucial part of the initial design phase for a screen design, i.e. the UI/UX for anything that has a screen - from mobile phones to kiosks to applications and websites. It is generally in this phase that any design flaws are found, and although any changes at this stage, in comparison to changes in the development phase, will be relatively cheap, it can highlight any flawed logic in the systematic layout of the design.</p>
+            <p>The wireframe serves as a blueprint for the website, outlining the placement of various elements such as headers, navigation menus, content areas, and footers. For my project, the wireframe laid out a clear plan for incorporating the dark blue background and the neon color palette (yellow, red, and green) for the headings, along with white for the body text. The choice of a pixelated font further enhances the retro gaming feel, providing a cohesive and immersive user experience.</p>   
+
+            <h2>Iterative Testing and Refinement</h2>   
+
+            <p>In the context of my project, usability testing involved assessing how effectively the neon color palette and pixelated font contributed to the overall user experience. Colleagues and potential users provided feedback on aspects such as readability, navigation ease, and the overall aesthetic appeal. This feedback is essential for identifying areas that need refinement.</p>
+            <p>They provide a visual blueprint that guides both design and development, ensuring that the final product is cohesive, functional, and aligned with the intended user experience. The iterative testing and refinement process, supported by wireframes, ensures that the design evolves based on feedback and usability insights, resulting in a website that is both engaging and effective.</p>
+    </div>
+
+
+    <footer class="h-card">
+        <p>Contact me at:</p>
+        <p>E-mail: <a class="u-email" href="mailto:umthaoupa@gmail.com">umthaoupa@gmail.com</a></p>
+        <p>Contact no: <span class="p-tel">0745809483</span></p>
+        <p>GitHub: <a class="u-url" href="https://github.com/UmthaUnathi21" target="_blank">UmthaUnathi21</a></p>
+    </footer>
+    
+    <!-- Include the external JavaScript file -->
+    <script src="../js/gallery.js"></script>
+
+</body>
+</html>

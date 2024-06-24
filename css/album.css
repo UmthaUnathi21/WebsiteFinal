@@ -1,0 +1,131 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Arcade-like font */
+    background-color: #0e0b16; /* Dark background */
+    color: #ffffff; /* Bright text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #1a1a2e; /* Slightly lighter background for header */
+    color: #ffcc00; /* Bright yellow */
+    padding: 1rem;
+    text-align: center;
+    width: 100%; /* Full width */
+}
+
+#header ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#header ul a {
+    color: #00ff00; /* Bright green */
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+#header ul a:hover {
+    color: #ff00ff; /* Magenta on hover */
+}
+
+#content {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffcc00; /* Bright yellow */
+    text-shadow: 2px 2px #ff0000; /* Red shadow for arcade effect */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cd-container {
+    perspective: 1000px;
+    margin-top: 2rem; /* Add margin to separate content and CD cover */
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.cd-case {
+    width: 200px; /* Adjust the width to make the CD case wider */
+    height: 250px; /* Adjust the height to make the CD case taller */
+    background-color: #191919;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCase 5s infinite linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth effect */
+}
+
+.album-name {
+    margin-top: 10px; /* Adjust margin top to create space */
+    font-size: 1.2em; /* Adjust font size as needed */
+    position: absolute; /* Position absolutely relative to its container */
+    top: calc(100% + 10px); /* Position the text below the CD cover */
+    left: 50%; /* Align the text horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    width: 100%; /* Make sure it spans the entire width */
+    text-align: center; /* Center the text horizontally */
+}
+
+.cd {
+    width: 100%;
+    height: 100%;
+    background-color: #141414;
+    position: absolute;
+    top: 25px; /* Adjust the top position to center the CD cover vertically */
+    left: 25px; /* Adjust the left position to center the CD cover horizontally */
+    transform-style: preserve-3d;
+}
+
+.cd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the entire image is contained within the div */
+}
+
+footer {
+    background-color: #1a1a2e; /* Slightly lighter background for footer */
+    color: #e94560; /* Red text color */
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Style for icon fonts */
+footer .fas,
+footer .fab {
+    margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+
+.spiderman-font {
+    font-family: 'Amazing Spider-Man', sans-serif;
+    color: #ff0000; /* Spiderman red color */
+    text-shadow: 1px 1px 2px #000000; /* Black shadow for depth */
+}
+
+@keyframes rotateCase {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

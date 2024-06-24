@@ -1,0 +1,87 @@
+/* css/index.css */
+
+@font-face {
+    font-family: 'Amazing Spider-Man';
+    src: url('../fonts/AmazingSpiderMan.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Press Start 2P', cursive; /* Arcade-like font */
+    background-color: #0e0b16; /* Dark background */
+    color: #ffffff; /* Bright text color */
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffcc00; /* Bright yellow */
+    text-shadow: 2px 2px #ff0000; /* Red shadow for arcade effect */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: #00ff00; /* Bright green */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #ff00ff; /* Magenta on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+img {
+    border: 2px solid #ffcc00; /* Border to match the arcade theme */
+    border-radius: 10px; /* Slight rounding */
+    box-shadow: 0 0 10px #ff0000; /* Red shadow */
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: rotate(10deg) scale(1.1); /* Rotate and enlarge on hover */
+}
+
+footer {
+    background-color: #1a1a2e; /* Slightly lighter background for footer */
+    color: #e94560; /* Red text color */
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.spiderman-font {
+    font-family: 'Amazing Spider-Man', sans-serif;
+    color: #ff0000; /* Spiderman red color */
+    text-shadow: 1px 1px 2px #000000; /* Black shadow for depth */
+}
+
+/* Add keyframes for an animation effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation */
+#content, footer {
+    animation: fadeIn 1.5s ease-in-out;
+}
